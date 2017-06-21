@@ -1,0 +1,67 @@
+*{padding:0;margin:0;text-decoration: none;list-style: none;}
+.clear:after{	content: "";	display: block;	clear: both;}
+/*头部*/
+header{height:2.2rem;width: 100%;text-shadow:3px 1px 1px #333;background: #E4376C;text-align: center;line-height: 2.2rem;color:#fff;font-size: 1.3rem;}
+/*脚部*/
+footer{height: 3rem;width: 100%;position: fixed;bottom: 0;background: #484850;}
+dl{width: 20%;float: left;text-align: center;border-top:0.25rem solid #484850}
+.now{border-top:0.25rem solid #E4376C}
+dl dt{width:20%;height:1.6rem;display: table-cell; vertical-align:bottom;text-align: center;}
+dl img{width: 1.6rem;height:auto;vertical-align:middle;}
+dl dd{font-size: 0.8rem;color: #fff;}
+/*搜索*/
+.sousuo{height:2.22rem;width:100%;background: #535258;line-height: 2rem;text-align: center;}
+.sousuo input{height: 1.3rem;width:13.3rem;border-radius: 50px;padding-left: 1.7rem;background: #fff url(../images/search.png)no-repeat 0.5rem 6px;background-size: contain;font-size: 0.7rem;}
+/*轮播*/
+.swiper-pagination-bullet{height:0.4rem;width:0.4rem;background: #fff;opacity: 1;}
+.swiper-pagination-bullet-active{background: red;}
+/*商品列表*/
+.list li{border-top:1px solid #787878}
+.shangpin{border:1px solid #787878;float: left;width: 4.3rem;height:4.3rem;margin:0.4rem}
+.list div{float: left;width:10.5rem;padding-top: 0.4rem;}
+.listname{height:2.3rem;overflow: hidden;text-overflow: ellipsis;word-break:break-all;word-wrap:break-word;font-size:0.8rem;font-family: "微软雅黑";}
+.jiage{width:6.5rem;float: left;}
+.money{color:#E4376C;font-size: 0.8rem;font-family: "微软雅黑";}
+.del{text-decoration:line-through;font-size: 0.6rem;padding-left: 0.8rem;}
+.zhekou{display: block;font-size: 0.6rem;font-family: "微软雅黑";padding-left:0.2rem}
+.jiaru{height:1.3rem;width:2.95rem;overflow: hidden;border-radius: 20px;float: left;margin-top: 0.6rem;}
+.jiaru img{height:1.3rem;width:2.95rem;}
+/*index结束*/
+/*分类开始*/
+.fenleilist{height:2rem;width:auto;line-height: 2rem;border-bottom: 1px solid;padding-left: 1rem;font-family: "微软雅黑";font-size: 1rem;overflow: hidden}
+.fenleilist img{float: right;padding: 0.6rem 2rem;height:0.8rem;width:0.8rem}
+.listfenlei li {height:2rem;width:auto;line-height: 2rem;border-bottom: 1px solid;padding-left: 1.5rem;font-family: "微软雅黑";font-size: 0.9rem}
+.listfenlei li img{float: right;padding: 0.6rem 2rem;height:0.8rem;width:0.8rem}
+/*分类结束*/
+/*user开始*/
+.userbg{background: #F8F3F7;}
+.goback{width:1.3rem;height:auto;position: absolute;left: 1.5rem;top:0.7rem;}
+.user{padding:1.5rem}
+.userpic{width:4.125rem;height:auto;float: left;}
+.username{font-size: 1.2rem;padding-left: 5rem;}
+.buton{padding-left: 5rem;padding-top: 1.2rem;}
+.buton input{font-size: 0.9rem;background: url(../images/but_bg1.png)repeat-x;padding:0.2rem 0.5rem;background-size: contain;color: #fff;border-radius: 30px;border:none;outline: none;}
+.mesage{padding:1.5rem}
+.mesage ul{overflow: hidden;border-radius: 30px;background: #fff;border:1px solid #dedede}
+.mesage ul li{height:2rem;font-size: 1.2rem;border-bottom: 1px solid #dedede;line-height: 2rem;padding-left: 1rem;}
+.mesage ul li img{float: right;padding: 0.6rem 1rem;height:0.8rem;width:0.8rem}
+/*user结束*/
+/*登陆注册开始*/
+.login{background: url(../images/but_bg1.png) repeat-x;background-size:contain ;padding: 0.3rem 0.5rem;color:#fff;font-size: 0.7rem;border:none;outline: none;border-radius: 20px;position: absolute;right:1.5rem;top:0.4rem}
+.kuang{ text-align: center;padding-top:3rem}
+.kuang input{width:11rem;height:2rem;border-radius: 30px;font-size: 1rem;padding-left: 1rem;line-height: 2rem;margin-top: 1rem;}
+#rad{height:1rem;width:1rem}
+.kuang label{width: 11rem;display: block;margin:0 auto;text-align: left;}
+.kuang label a{font-size: 0.7rem;text-decoration: underline;color: #888;}
+.buttom{height:2rem;width:12rem;background: url(../images/but_bg1.png) repeat-x;background-size: contain;display: block;margin:1.5rem auto;border-radius: 20px;line-height: 2rem;font-size: 1rem;color:#fff;}
+/*登陆注册结束*/
+/*列表页面*/
+.tianjia{font-size: 1rem;padding:0.2rem 0.5rem}
+#list{width: 100%;height:auto}
+#list li{height:10rem;width: 100%;}
+#lista{overflow:auto;height:20rem;width: 100%;}
+html:-webkit-scrollbar,
+#lista:-webkit-scrollbar{
+	width:0;
+	height:0;
+}

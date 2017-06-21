@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
+			<link rel="stylesheet" href="css/css.css" />
+	</head>
+	<body class="userbg">
+		<header>
+			<img src="images/left.png" alt="" class="goback"  onclick="history.go(-1)"/>
+			购物车
+		</header>
+			<footer>
+		    	<dl>
+		    		<a href="index.html">
+		    		<dt><img src="images/bottom_1.png" alt="" /></dt>
+		    		<dd>首页</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="fenlei.html">
+		    		<dt><img src="images/bottom_2.png" alt="" /></dt>
+		    		<dd>分类</dd>
+		    		</a>
+		    	</dl>
+		    	<dl  class="now">
+		    		<a href="gouwuche.html">
+		    		<dt><img src="images/bottom_3.png" alt="" /></dt>
+		    		<dd>购物车</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="user.html">
+		    		<dt><img src="images/bottom_4.png" alt="" /></dt>
+		    		<dd>我的秀</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="">
+		    		<dt><img src="images/bottom_5.png" alt="" /></dt>
+		    		<dd>更多</dd>
+		    		</a>
+		    	</dl>
+		    </footer>
+<div id="box"></div>
+	</body>
+	<script src="js/rem.js"></script>
+	<script src="js/zepto.js"></script>
+	<script>
+		$(function(){
+			var name=localStorage.getItem("username");
+			$.ajax({
+				
+				url:'http://datainfo.duapp.com/shopdata/getCar.php',
+				data:{
+					userID:name
+				},
+				dataType:'jsonp',
+				success:function(data){
+					console.log(data);
+					for(var i=0;i<data.length;i++){
+							var str='';
+							str+='<img src="'+data[i].goodsListImg+'" />';
+							str+='<p>'+data[i].goodsName+'</p>';
+							str +='<p style="color:red;margin-top:1rem;">'+data[i].price+'元</p>'
+							str+='<button style="color:black;width:25%;height:2.5rem;background:pink;margin-bottom:1rem;font-size:1rem;margin-top: -2rem;" class="btn"idcard="'+data[i].goodsID+'">删除</button>';
+						$('#box').append(str);
+					
+						}
+				}
+			});
+			$('#box').on("click",".btn",function(){
+				var goodsID=$(this).attr("idcard");
+				$.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/updatecar.php",
+					async:true,
+					data:{
+						userID:name,
+						goodsID:goodsID,
+						number:0//0为删除该商品
+					},
+					success:function(data){
+						if(data==1){
+							window.location.href="gouwuche.html"
+						}
+					}
+				});
+			})
+			
+		})
+	</script>
+</html>

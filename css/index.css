@@ -1,0 +1,61 @@
+body,html{width:100%;height:100%;padding:0;margin:0}
+
+/*enter开始*/
+.swiper-container{background:#f8f3f7 ;width: 100%;height:100%;}
+.swiper-pagination{width: 20rem;}
+.a1{background:url(../images/3_01.jpg) no-repeat top ;background-size: contain;}
+.a1 p{font-size:1.5rem ;color:#fff;text-align: center;}
+.swiper-pagination-bullet{width:0.5rem;height:0.5rem}
+.a1 p:nth-child(1){margin-top: 2.5rem;}
+.a1 p:nth-child(3){margin-top:7rem;color:#787878}
+.swiper-pagination-bullet-active{background: #e4376c!important;}
+.a1 p:nth-child(4){margin: 1rem auto 0 1rem;text-align: left;font-size: 1.3rem;color:#787878}
+.a1 p:nth-child(4) span{font-size: 1.5rem;}
+.a1 p:nth-child(4) .red{color:#E4376C;}
+
+.a2 p:first-child{height:6.5rem ;width: 1.49rem;margin:3rem auto 0 auto}
+.a2 p:first-child img{width:1.5rem}
+.a2 p:nth-child(2){text-align: center;font-size: 1.2rem;color:#E4376C}
+.a2 p:nth-child(3){text-align: center;}
+.a2 p:nth-child(3) img{width:5.5rem}
+
+.a21 {padding-left: 2rem;}
+.a21 img{width: 9.6rem;height:auto}
+/*.a21{width:9.6rem;height:4.5rem;border:#cac8cb 1px solid;background: #fff;box-shadow:0px 15px 10px #CAC8CB;border-radius: 20px;position: relative;}
+.entry-trangle{
+        position:absolute;
+        margin:4.4rem 7rem;
+        width:0;
+        height:0;
+        border-left:0.5rem solid transparent;
+        border-right:0.5rem solid transparent;
+        border-top:1rem solid #fff;
+        z-index:-1;
+        box-shadow:0px 3px 1px #CAC8CB;
+    }*/
+   
+.a3{text-align: center;}   
+.a3 p:first-child{margin-top: 3rem;font-size: 1.2rem;}
+.a3 p:nth-child(2) img{width:11rem;height:auto;margin:2rem auto 1.5rem auto;}
+.a3 p:nth-child(3) img{width:7rem;height:auto}
+   
+ .a4{text-align: center;}
+ .a4 p:first-child{height:6.5rem ;width: 1.49rem;margin:3rem auto 0 auto}
+.a4 p:first-child img{width:1.5rem}
+.a4 p:nth-child(2){font-size: 1rem;color:#E4376C}
+.a4 p:nth-child(3){margin-top: 5.8rem;}
+.a4 p:nth-child(3) a{height:2rem;width: 5.9rem;color:#fff;background: url(../images/but_bg1.png)repeat-x;border-radius: 8px;display: block;margin: 0 auto;line-height: 2rem;text-decoration: none;}
+/*enter结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+

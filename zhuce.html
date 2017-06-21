@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
+			<link rel="stylesheet" href="css/css.css" />
+	</head>
+	<body class="userbg">
+		<header>
+			<img src="images/left.png" alt="" class="goback"  onclick="history.go(-1)"/>
+			注册
+			<input type="button" name="" id="" value="登录" class="login"/>
+		</header>
+			<footer>
+		    	<dl>
+		    		<a href="index.html">
+		    		<dt><img src="images/bottom_1.png" alt="" /></dt>
+		    		<dd>首页</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="fenlei.html">
+		    		<dt><img src="images/bottom_2.png" alt="" /></dt>
+		    		<dd>分类</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="gouwuche.html">
+		    		<dt><img src="images/bottom_3.png" alt="" /></dt>
+		    		<dd>购物车</dd>
+		    		</a>
+		    	</dl>
+		    	<dl class="now">
+		    		<a href="user.html">
+		    		<dt><img src="images/bottom_4.png" alt="" /></dt>
+		    		<dd>我的秀</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="">
+		    		<dt><img src="images/bottom_5.png" alt="" /></dt>
+		    		<dd>更多</dd>
+		    		</a>
+		    	</dl>
+		    </footer>
+					<div class="kuang">
+			<input type="text" placeholder="账号" id="userid"/>
+			<input type="text" placeholder="密码" id="userword" />
+			 <input type="text" placeholder="重复密码" id="userworda"/>
+			<buttom class="buttom" id='zhuce'>同意服务协议并注册</buttom>
+		</div>
+	</body>
+	<script src="js/rem.js"></script>
+	<script src="js/zepto.js"></script>
+	<script>
+	$('#zhuce').click(
+			function(){
+				var userid=$('#userid').val();
+				var userword=$('#userword').val();
+				var userworda=$('#userworda').val();
+				if (userid=="") {
+					alert('输入用户名');
+				}else if(userword==""){
+					alert("请输入密码");
+				}else if(userworda==""){
+					alert("请再次输入密码");
+				}else if(userworda!=userword){
+					alert("两次密码不一样");
+				}else{
+					$.ajax({
+					url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+					data:{
+						status:'register',
+						userID:userid,
+						password:userword
+					},
+					success:function(mag){
+						if(mag=='0'){
+							alert('用户名重复');
+						}else if(mag=='2'){
+							alert('注册失败');
+						}else{
+							window.location.href='login.html'
+						}
+					}
+				})
+				}
+				
+
+			}
+		)
+	</script>
+
+</html>

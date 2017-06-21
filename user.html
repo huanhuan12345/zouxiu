@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
+			<link rel="stylesheet" href="css/css.css" />
+	</head>
+	<body class="userbg">
+		<header>
+			<img src="images/left.png" alt="" class="goback"  onclick="history.go(-1)"/>
+			我的秀
+		</header>
+		<footer>
+		    	<dl>
+		    		<a href="index.html">
+		    		<dt><img src="images/bottom_1.png" alt="" /></dt>
+		    		<dd>首页</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="fenlei.html">
+		    		<dt><img src="images/bottom_2.png" alt="" /></dt>
+		    		<dd>分类</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="gouwuche.html">
+		    		<dt><img src="images/bottom_3.png" alt="" /></dt>
+		    		<dd>购物车</dd>
+		    		</a>
+		    	</dl>
+		    	<dl class="now">
+		    		<a href="user.html">
+		    		<dt><img src="images/bottom_4.png" alt="" /></dt>
+		    		<dd>我的秀</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="">
+		    		<dt><img src="images/bottom_5.png" alt="" /></dt>
+		    		<dd>更多</dd>
+		    		</a>
+		    	</dl>
+		    </footer>
+		    
+		<div class="user">
+			<img src="images/ursepic.png" alt="" class="userpic" />
+			<div>
+				<p class="username">昵称：未知</p>
+				<p class="buton">
+					<input type="button" name="" id="" value="注册" />
+					<input type="button" name="" id="" value="登录" />
+				</p>
+			</div>
+		</div>
+		<div class="mesage">
+			<ul>
+				<li>我的订单<img src="images/you.png" alt="" /></li>
+				<li>我的优惠券<img src="images/you.png" alt="" /></li>
+				<li>浏览记录<img src="images/you.png" alt="" /></li>
+				<li>我的收藏<img src="images/you.png" alt="" /></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/rem.js"></script>
+<script type="text/javascript">
+	var oa=document.getElementsByClassName('buton')[0];
+	var oa1=oa.getElementsByTagName('input')[0];
+	var oa2=oa.getElementsByTagName('input')[1];
+	oa1.onclick=function(){
+		window.location.href="zhuce.html";
+	}
+	oa2.onclick=function(){
+		window.location.href='login.html';
+	}
+</script>
+</html>

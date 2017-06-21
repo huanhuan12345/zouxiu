@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/zepto.js"></script>
+	<body>
+		<header>登录</header>
+		<input type="text" class="txta" placeholder="请输入你的用户名"/>
+		<input type="text" class="txtb" placeholder="请输入你的密码" />
+		<button id="btn">登录</button>
+		<script>
+			$("#btn").click(function(){
+				var txta=$(".txta").val();
+				var txtb=$(".txtb").val();
+				if(txta==""){
+					alert("请输入你的用户名")
+				}else if(txtb==""){
+					alert("请输入你的密码")
+				}else{
+					$.ajax({
+						type:"get",
+						url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+						async:true,
+						data:{
+							status:"login",
+							userID:txta,
+							password:txtb
+						},
+						success:function(res){
+							console.log(typeof res)
+							var zhuan=JSON.parse(res)
+							console.log(zhuan)
+						if(txta==zhuan.userID){
+							alert("登录成功")
+						}else if(res==2){
+							alert("用户名密码不符合")
+						}
+						}
+						
+					});
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />  
+		<title></title>
+			<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
+			<link rel="stylesheet" href="css/css.css" />
+	</head>
+	<body>
+		<header>
+			zuoxiu  走秀网
+		</header>
+			<div class="sousuo">
+				<input type="text" name="" id="" value="请输入搜索内容" />
+			</div>
+			<footer>
+		    	<dl>
+		    		<a href="index.html">
+		    		<dt><img src="images/bottom_1.png" alt="" /></dt>
+		    		<dd>首页</dd>
+		    		</a>
+		    	</dl>
+		    	<dl class="now">
+		    		<a href="fenlei.html">
+		    		<dt><img src="images/bottom_2.png" alt="" /></dt>
+		    		<dd>分类</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="gouwuche.html">
+		    		<dt><img src="images/bottom_3.png" alt="" /></dt>
+		    		<dd>购物车</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="user.html">
+		    		<dt><img src="images/bottom_4.png" alt="" /></dt>
+		    		<dd>我的秀</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="">
+		    		<dt><img src="images/bottom_5.png" alt="" /></dt>
+		    		<dd>更多</dd>
+		    		</a>
+		    	</dl>
+		    </footer>
+		    <div id='lista'>
+		    	<ul id='list'>
+		    	
+		    	</ul>
+		    </div>
+
+	</body>
+	<script src="js/rem.js"></script>
+	<script src="js/zepto.js"></script>
+	<script>
+//	var myScroll; 
+		$.ajax({
+			type:"post",
+			url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+			async : false,
+			dataType:'jsonp',
+			success:function(data){
+				var str='';
+				for(var i=0;i<data.length;i++){
+					
+					str+=	'<li>'+'<p>'+	data[i].goodsName+'</p>'+'<p>'+'<img src='+data[i].goodsListImg+'>'+'</p>'+'<p>'+data[i].price+'</p>'+'</li>'+'<br>'+'<input type="button"  value="加入购物车" class="tianjia" idCard="'+data[i].goodsID+'">'
+					
+				}
+				$('#list').html(str);
+//					var myscroll=new IScroll("#lista",{
+//						scrollY:true,
+//			click: true 
+//					});
+
+			}
+		});
+		$('#lista').on('click','.tianjia',function(){
+			var name=localStorage.getItem('username');
+			var idcard=$(this).attr('idCard');
+			$.ajax({
+				url:'http://datainfo.duapp.com/shopdata/updatecar.php',
+				data:{
+					userID:name,
+					goodsID:idcard,
+				},
+				success:function(data){
+//					console.log(data);
+//					alert(data);
+					if(data==1){
+							window.location.href='gouwuche.html' ;
+								}
+				}
+			})
+		})
+
+	</script>
+</html>

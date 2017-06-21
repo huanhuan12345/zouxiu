@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<link rel="stylesheet" href="css/swiper-3.4.1.min.css" />
+			<link rel="stylesheet" href="css/css.css" />
+	</head>
+	<body>
+		<header>
+			zuoxiu  走秀网
+		</header>
+			<div class="sousuo">
+				<input type="text" name="" id="" value="请输入搜索内容" />
+			</div>
+			<footer>
+		    	<dl>
+		    		<a href="index.html">
+		    		<dt><img src="images/bottom_1.png" alt="" /></dt>
+		    		<dd>首页</dd>
+		    		</a>
+		    	</dl>
+		    	<dl class="now">
+		    		<a href="fenlei.html">
+		    		<dt><img src="images/bottom_2.png" alt="" /></dt>
+		    		<dd>分类</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="gouwuche.html">
+		    		<dt><img src="images/bottom_3.png" alt="" /></dt>
+		    		<dd>购物车</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="user.html">
+		    		<dt><img src="images/bottom_4.png" alt="" /></dt>
+		    		<dd>我的秀</dd>
+		    		</a>
+		    	</dl>
+		    	<dl>
+		    		<a href="">
+		    		<dt><img src="images/bottom_5.png" alt="" /></dt>
+		    		<dd>更多</dd>
+		    		</a>
+		    	</dl>
+		    </footer>
+		    
+		    <div class="fenleilist">
+		    	全部
+		    	<img src="images/you.png" alt="" />
+		    </div>
+		    	<ul class="listfenlei" style="display: none;">
+		    		<li>衬衫
+		    	<img src="images/you.png" alt="" /></li>
+		    		<li>女装T恤
+		    	<img src="images/you.png" alt="" /></li>
+		    		<li>珠宝首饰
+		    	<img src="images/you.png" alt="" /></li>
+		    		<li>美食保健
+		    	<img src="images/you.png" alt="" /></li>
+		    		<li>化妆品
+		    	<img src="images/you.png" alt="" /></li>
+		    		<li>品牌专场
+		    	<img src="images/you.png" alt="" /></li>
+		    		<li>连衣裙
+		    	<img src="images/you.png" alt="" /></li>
+		    	</ul>
+	</body>
+	<script src="js/rem.js"></script>
+	<script>
+		var ofenlei=document.getElementsByClassName('fenleilist')[0];
+		var olist=document.getElementsByClassName('listfenlei')[0];
+		var oimg=ofenlei.getElementsByTagName('img')[0];
+		ofenlei.onclick=function(){
+			if(olist.style.display=='block'){
+				olist.style.display='none';
+				oimg.src='images/you.png';
+			}else{
+				olist.style.display='block';
+				oimg.src='images/xia.png';
+			}
+		}
+	</script>
+</html>
